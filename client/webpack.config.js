@@ -22,6 +22,34 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpac Plugin'
       }),
+
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'service-worker.js',
+      }),
+
+      new WebpackPwaManifest({
+        name: 'Just Another Text Editor',
+        short_name: 'JATE',
+        description: 'Edits texts and more!',
+        background_color: '#867272',
+        theme_color: '#867272',
+        start_url: './',
+        publicPath: './',
+        icons: [
+          {
+            src: path.resolve('./favicon.ico'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+          {
+            src: path.resolve('./favicon.ico'),
+            size: '1024x1024',
+            destination: path.join('assets', 'icons'),
+            purpose: 'maskable'
+          }
+        ],
+      })
     ],
 
     module: {
