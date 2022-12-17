@@ -18,7 +18,7 @@ export const putDb = async (content) => {
 
   const contactDB = await openDB('jate',1);
 
-  const tx = contactDB.transaction('contacts', 'readwrite');
+  const tx = contactDB.transaction('jate', 'readwrite');
 
   const store = tx.objectStore('jate');
 
@@ -32,7 +32,7 @@ export const getDb = async () => {
 
   const contactDB = await openDB('jate',1);
 
-  const tx = contactDB.transaction('contacts', 'readonly');
+  const tx = contactDB.transaction('jate', 'readonly');
 
   const store = tx.objectStore('jate');
 
