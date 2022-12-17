@@ -1,12 +1,6 @@
 {
   "icons": [
     {
-      "src": "./assets/icons/icon_1024x1024.c5df476245a751ae1f7776f71e0865b6.png",
-      "sizes": "1024x1024",
-      "type": "image/png",
-      "purpose": "maskable"
-    },
-    {
       "src": "./assets/icons/icon_512x512.3ca11a97eb7d90b61fc3db0f3c5dcdb6.png",
       "sizes": "512x512",
       "type": "image/png"

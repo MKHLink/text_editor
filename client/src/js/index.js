@@ -3,15 +3,6 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
-import Logo from "../images/logo.png";
-
-import {EditorView, keymap} from "@codemirror/view"
-import {defaultKeymap} from "@codemirror/commands"
-
-window.addEventListener('load', function(){
-  document.getElementById('logo').src = Logo;
-});
-
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
@@ -40,9 +31,3 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
-
-if ('serviceWorker' in navigator) {
-  // Use the window load event to keep the page load performant
-  window.addEventListener('load', () => {
-  navigator.serviceWorker.register('./service-worker.js');
-})};

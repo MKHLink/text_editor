@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Webpac Plugin'
+        title: 'Webpack Plugin'
       }),
 
       new InjectManifest({
@@ -36,18 +36,13 @@ module.exports = () => {
         theme_color: '#867272',
         start_url: './',
         publicPath: './',
+        inject:true,
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
-          {
-            src: path.resolve('src/images/logo.png'),
-            size: '1024x1024',
-            destination: path.join('assets', 'icons'),
-            purpose: 'maskable'
-          }
         ],
       })
     ],
