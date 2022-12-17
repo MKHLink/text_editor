@@ -1,11 +1,12 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import './database';
+import {initdb, putDb, getDb} from './database';
 import '../css/style.css';
 
 import Logo from "../images/logo.png";
 
 window.addEventListener('load', function(){
+  initdb();
   document.getElementById('logo').src = Logo;
 });
 
