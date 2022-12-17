@@ -1,12 +1,14 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import {initdb, putDb, getDb} from './database';
+import './database';
 import '../css/style.css';
 
 import Logo from "../images/logo.png";
 
+import {EditorView, keymap} from "@codemirror/view"
+import {defaultKeymap} from "@codemirror/commands"
+
 window.addEventListener('load', function(){
-  initdb();
   document.getElementById('logo').src = Logo;
 });
 
