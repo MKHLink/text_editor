@@ -34,7 +34,7 @@ A simple text editor that can be installed on the desktop for offlice use
 https://mighty-chamber-40948.herokuapp.com/
 
 ## Contribution
-Mohammad Komol Hasan
+Linkhon Hasan
 
 ## Questions
 GitHub: MKHLink
